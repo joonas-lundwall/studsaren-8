@@ -26,8 +26,11 @@ Aqara T1 → USB dongle → zigbee2mqtt → mosquitto → dashboard (Node) → t
    ```
 
    Put that `/dev/serial/by-id/usb-...` path into both `docker-compose.yaml`
-   (the `devices:` line) and `zigbee2mqtt/configuration.yaml` (`serial.port`).
-   It survives reboots, unlike `/dev/ttyACM0`.
+   (the `devices:` line) and `zigbee2mqtt/configuration.yaml` (`serial.port`),
+   replacing the `/dev/ttyACM0` placeholder. `/dev/ttyACM0` is the generic name
+   your dongle gets on each boot, and its number can change after a reboot or
+   replug; the `by-id` path is tied to the dongle's serial number, so it always
+   points at the same device.
 
 2. **Start everything:**
 
