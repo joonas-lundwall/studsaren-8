@@ -19,6 +19,7 @@ services:
       - "8080:8080" # Z2M web frontend (for pairing)
     devices:
       # Use the stable by-id path you found with: ls -l /dev/serial/by-id/
+      # Example: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0:/dev/ttyACM0
       - /dev/ttyACM0:/dev/ttyACM0
 
   dashboard:
