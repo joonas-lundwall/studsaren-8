@@ -65,3 +65,4 @@ Aqara T1 → USB dongle → zigbee2mqtt → mosquitto → dashboard (Node) → t
 - Mosquitto runs with anonymous access — fine on a trusted home LAN; lock it
   down if you expose it.
 - If an Aqara T1 keeps dropping off, re-pair it close to the dongle.
+  test
