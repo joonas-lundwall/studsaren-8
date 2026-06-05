@@ -23,7 +23,7 @@ const insert = db.prepare(
 );
 
 const app = express();
-const state = new Map();   // friendlyName -> latest reading
+const state = new Map();   // friendlyName -> latest reading testestestest
 const clients = new Set(); // connected SSE browsers
 
 // Hydrate latest values from DB so the dashboard isn't blank after a restart
